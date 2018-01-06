@@ -1,8 +1,14 @@
-# binary-to-decimal
-- 很經典的題目類型(以前計概常考)，看如何用collect來實作
+<?php
 
-## 寫法一
-```php
+require_once 'vendor/autoload.php';
+
+/*
+100110101
+1 x 2^8 + 0 x 2^7 + 0 x 2^6 + 1 * 2^5 + 1 * 2^4 + 0 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0
+*/
+
+//寫法一
+/*
 function binaryToDecimal($binary)
 {
     $total = 0;
@@ -14,11 +20,10 @@ function binaryToDecimal($binary)
     }
     return $total;
 }
-echo binaryToDecimal("100110101");
-```
+*/
 
-## 寫法二
-```php
+//echo binaryToDecimal("100110101");
+
 //寫法二
 //跑程式時要注意要把其中一個fun註解掉，不然會撞名
 function binaryToDecimal($binary)
@@ -31,6 +36,4 @@ function binaryToDecimal($binary)
         })->sum();
 }
 
-echo binaryToDecimal("100110101");
-```
-
+//echo binaryToDecimal("100110101");
